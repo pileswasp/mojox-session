@@ -96,7 +96,7 @@ MojoX::Session::Store::Dbic - DBIx::Class Store for MojoX::Session
     my $schema = DB->connect($dsn, $user, $pass, \%attr);
     my $rs = $schema->resultset('Session');
     my $session = MojoX::Session->new(
-        store => MojoX::Session::Store::Dbi->new(resultset => $rs),
+        store => MojoX::Session::Store::Dbic->new(resultset => $rs),
         ...
     );
 
